@@ -60,22 +60,22 @@ class SkeletonServiceProvider extends ServiceProvider
         // Publishing the configuration file.
         $this->publishes([
                              __DIR__.'/../config/skeleton.php' => config_path(':vendor_slug/:package_slug.php'),
-                         ], ':vendor_slug.:package_slug.config');
+                         ], ':vendor_slug-:package_slug-config');
 
         // Publishing the views.
         /*$this->publishes([
             __DIR__.'/../resources/views' => base_path('resources/views/vendor/:lc:vendor'),
-        ], ':vendor_slug.:package_slug.views');*/
+        ], ':vendor_slug-:package_slug-views');*/
 
         // Publishing assets.
         /*$this->publishes([
             __DIR__.'/../resources/assets' => public_path('vendor/:lc:vendor'),
-        ], ':vendor_slug.:package_slug.views');*/
+        ], ':vendor_slug-:package_slug-views');*/
 
         // Publishing the translation files.
         /*$this->publishes([
             __DIR__.'/../resources/lang' => resource_path('lang/vendor/:lc:vendor'),
-        ], ':vendor_slug.:package_slug.views');*/
+        ], ':vendor_slug-:package_slug-views');*/
 
         // Registering package commands.
         // $this->commands([]);

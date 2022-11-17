@@ -35,14 +35,14 @@ composer require :vendor_slug/:package_slug
 You can publish and run the migrations with:
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-migrations"
+php artisan vendor:publish --tag=":vendor_slug-:package_slug-migrations"
 php artisan migrate
 ```
 
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-config"
+php artisan vendor:publish --tag="::vendor_slug-:package_slug-config"
 ```
 
 This is the contents of the published config file:
@@ -55,7 +55,7 @@ return [
 Optionally, you can publish the views using
 
 ```bash
-php artisan vendor:publish --tag=":package_slug-views"
+php artisan vendor:publish --tag=":vendor_slug-:package_slug-views"
 ```
 
 ## Usage
